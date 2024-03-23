@@ -21,7 +21,7 @@ function updatePrice(value) {
   } else {
     basePrice += 1.25; // Increase base price by $1.25 for up product
   }
-  priceElement.textContent = `$${basePrice.toFixed(2)}`;
+  priceElement.textContent = `$${basePrice.toFixed(2)}`; //basePrice variable as a currency with two decimal places
 }
 
 /*price and product count end*/
