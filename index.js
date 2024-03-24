@@ -25,3 +25,14 @@ function updatePrice(value) {
 }
 
 /*price and product count end*/
+
+// JavaScript to trigger animation header section
+document.addEventListener("DOMContentLoaded", function () {
+  const listItems = document.querySelectorAll(".header ul li");
+
+  listItems.forEach((item, index) => {
+    setTimeout(() => {
+      item.classList.add("show");
+    }, (index + 1) * 500); // Delay each item by 500ms, starting from the second item
+  });
+});

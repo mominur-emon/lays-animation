@@ -23,9 +23,22 @@ body {
   align-items: center;
 }
 
+/*animation logic */
+@keyframes scaleIn {
+  0% {
+    transform: scale(0); /* Start with zero scale */
+    opacity: 0; /* Start with zero opacity */
+  }
+  100% {
+    transform: scale(1); /* End with full scale */
+    opacity: 1; /* End with full opacity */
+  }
+}
+
 #logo {
   width: 60px;
   height: 60px;
+  animation: scaleIn 3s ease forwards; /* Apply scale animation to the image */
 }
 
 #cart {
@@ -35,6 +48,7 @@ body {
   background-color: white;
   padding: 13px 26px;
   border-radius: 7px;
+  animation: scaleIn 3s ease forwards; /* Apply scale animation to the image */
 }
 
 .header ul {
@@ -48,6 +62,14 @@ body {
   font-weight: 600;
   font-size: 15px;
   position: relative;
+  opacity: 0; /* Initially hide the list items */
+  transform: translateY(-20px); /* Shift list items up initially */
+  transition: opacity 2s ease, transform 2s ease; /* Transition for opacity and transform */
+}
+
+.header ul li.show {
+  opacity: 1; /* Show list items */
+  transform: translateY(0); /* Move list items to their original position */
 }
 
 .header ul li:hover::after {
@@ -63,15 +85,20 @@ body {
   border-radius: 5px;
 }
 
-/*text section start*/
+/* Text section start */
 .text-section {
   margin-top: 130px;
-  width: 600px;
+  width: 500px;
+  position: relative;
+  /*overflow: hidden; /* Ensures that child elements don't overflow */
 }
+
 .text-section h1 {
   color: #484649;
   font-size: 52px;
   margin-bottom: -24px;
+  position: relative;
+  animation: slideInLeft 2s forwards;
 }
 
 .text-section h2 {
@@ -81,6 +108,8 @@ body {
   -webkit-text-stroke: 0.8px black;
   font-weight: 500;
   font-size: 29px;
+  position: relative;
+  animation: slideInTop 3s forwards;
 }
 
 .text-section p {
@@ -88,14 +117,61 @@ body {
   width: 380px;
   font-size: 13px;
   padding-bottom: 18px;
+  position: relative;
+  animation: slideInRight 2s forwards;
+}
+
+/* Keyframe animations */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    transform: translateY(-20%); /*top to bottom*/
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(20%); /* Start from 20% of viewport width */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* End at original position */
+    opacity: 1;
+  }
 }
 
 /*product price*/
+@keyframes slideInBottom {
+  from {
+    transform: translateY(35%); /*bottom to to*/
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .price-text {
   color: black;
   font-size: 22px;
   padding-bottom: 24px;
   font-weight: 500;
+  animation: slideInBottom 3s forwards;
 }
 
 .price-text span {
@@ -103,6 +179,16 @@ body {
 }
 
 /*product count section*/
+@keyframes scaleInProduct {
+  0% {
+    transform: scale(0.5); /* Start with 0.5 scale */
+    opacity: 0; /* Start with zero opacity */
+  }
+  100% {
+    transform: scale(1); /* End with full scale */
+    opacity: 1; /* End with full opacity */
+  }
+}
 .product-container {
   display: flex;
   justify-content: space-between;
@@ -116,6 +202,7 @@ body {
   border-radius: 8px;
   padding: 7px 22px;
   font-weight: 600;
+  animation: scaleInProduct 3s forwards;
 }
 
 .number img {
@@ -136,11 +223,12 @@ body {
   font-size: 15px;
   border: none;
   cursor: pointer;
+  animation: scaleInProduct 3s forwards;
 }
 
 .product-container button img {
-  width: 15px;
-  padding-right: 2px;
+  width: 17px;
+  padding-right: 4px;
 }
 
 /*circle-animation start*/
@@ -150,6 +238,7 @@ body {
   right: 40%;
 }
 
+/*lays position fixed start*/
 .lays-container {
   position: relative;
 }
@@ -226,4 +315,19 @@ body {
   width: 90px;
   height: 45px;
   z-index: 1;
+}
+
+/*lays position fixed end*/
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply scaleIn animation to all items */
+.lays-container img {
+  animation: scaleIn 3s ease forwards;
 }
