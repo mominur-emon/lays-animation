@@ -38,7 +38,8 @@ body {
 #logo {
   width: 60px;
   height: 60px;
-  animation: scaleIn 3s ease forwards; /* Apply scale animation to the image */
+  animation: scaleIn 1s ease forwards; /* Apply scale animation to the image */
+  animation-delay: 0.5s;
 }
 
 #cart {
@@ -48,7 +49,8 @@ body {
   background-color: white;
   padding: 13px 26px;
   border-radius: 7px;
-  animation: scaleIn 3s ease forwards; /* Apply scale animation to the image */
+  animation: scaleIn 1s ease forwards; /* Apply scale animation to the image */
+  animation-delay: 0.5s;
 }
 
 .header ul {
@@ -98,7 +100,7 @@ body {
   font-size: 52px;
   margin-bottom: -24px;
   position: relative;
-  animation: slideInLeft 2s forwards;
+  animation: slideInLeft 1s forwards;
 }
 
 .text-section h2 {
@@ -109,7 +111,7 @@ body {
   font-weight: 500;
   font-size: 29px;
   position: relative;
-  animation: slideInTop 3s forwards;
+  animation: slideInTop 1s forwards;
 }
 
 .text-section p {
@@ -118,7 +120,7 @@ body {
   font-size: 13px;
   padding-bottom: 18px;
   position: relative;
-  animation: slideInRight 2s forwards;
+  animation: slideInRight 1s forwards;
 }
 
 /* Keyframe animations */
@@ -171,7 +173,7 @@ body {
   font-size: 22px;
   padding-bottom: 24px;
   font-weight: 500;
-  animation: slideInBottom 3s forwards;
+  animation: slideInBottom 1s forwards;
 }
 
 .price-text span {
@@ -202,7 +204,7 @@ body {
   border-radius: 8px;
   padding: 7px 22px;
   font-weight: 600;
-  animation: scaleInProduct 3s forwards;
+  animation: scaleInProduct 1s forwards;
 }
 
 .number img {
@@ -223,7 +225,7 @@ body {
   font-size: 15px;
   border: none;
   cursor: pointer;
-  animation: scaleInProduct 3s forwards;
+  animation: scaleInProduct 1s forwards;
 }
 
 .product-container button img {

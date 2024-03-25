@@ -33,6 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
   listItems.forEach((item, index) => {
     setTimeout(() => {
       item.classList.add("show");
-    }, (index + 1) * 500); // Delay each item by 500ms, starting from the second item
+    }, (index + 1) * 300); // Delay each item by 500ms, starting from the second item
   });
 });
