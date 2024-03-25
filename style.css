@@ -236,86 +236,100 @@ body {
 /*circle-animation start*/
 .circle-container {
   position: absolute;
-  top: 40%;
-  right: 40%;
+  top: 30%;
+  right: 42%;
 }
-
+/*color circle below lays product*/
+.color-circle {
+  position: absolute;
+  background-color: #417394;
+  width: 470px;
+  height: 470px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.color-border {
+  position: absolute;
+  border: 4px solid #5291b0;
+  border-radius: 50%;
+  width: 530px;
+  height: 530px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
 /*lays position fixed start*/
-.lays-container {
-  position: relative;
-}
-
 .lays-container img {
   position: absolute;
 }
 
 #lays {
-  top: -100px;
-  left: -20px;
+  top: 0%;
+  right: 15%;
   width: 380px;
   z-index: 2;
 }
-
 #chip {
-  top: -160px;
-  left: 190px;
+  top: -12%;
+  left: 50%;
   width: 150px;
   z-index: 1;
 }
 #sauce {
-  left: 240px;
-  top: 60px;
+  left: 63%;
+  top: 30%;
   width: 110px;
   z-index: 1;
 }
 
 #masala {
-  left: 220px;
-  bottom: -460px;
+  left: 57%;
+  bottom: -7%;
   width: 230px;
   z-index: 1;
 }
 
 #crab {
-  right: -160px;
-  bottom: -430px;
+  left: -2%;
+  bottom: -3%;
   width: 250px;
   z-index: 1;
 }
 #text-1 {
-  right: -150px;
-  bottom: -400px;
-  width: 370px;
-  height: 350px;
+  left: -25%;
+  bottom: 7%;
+  width: 340px;
+  height: 330px;
   z-index: 1;
 }
 #Tasty {
-  right: -15px;
-  bottom: -270px;
+  left: -4%;
+  bottom: 31%;
   width: 120px;
   z-index: 1;
 }
 
 #text-2 {
-  right: -150px;
-  top: -26px;
-  width: 370px;
-  height: 300px;
+  left: -25%;
+  top: 15%;
+  width: 330px;
+  height: 280px;
   z-index: 1;
 }
 
 #Crispy {
-  right: 0px;
-  top: 95px;
+  left: -8%;
+  top: 37%;
   width: 120px;
   z-index: 1;
 }
 
 #and {
-  right: 10px;
-  top: 165px;
-  width: 90px;
-  height: 45px;
+  left: -2%;
+  top: 50%;
+  width: 80px;
+  height: 40px;
   z-index: 1;
 }
 
